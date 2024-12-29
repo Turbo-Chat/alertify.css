@@ -1,0 +1,118 @@
+/*!
+ * Alertify.css Custom Version 1.0.0
+ * @license MIT licensed
+ *
+ * Copyright (C) 2024 TurboChat
+ */
+
+/* Base Alertify Styles */
+.alertify {
+  padding: 12px 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12),
+              0 10px 36px -4px rgba(77, 96, 232, 0.3);
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: calc(50% - 20px);
+  z-index: 2147483647;
+  min-width: 200px;
+}
+
+/* Visible State */
+.alertify.on {
+  opacity: 1;
+}
+
+/* Close Button */
+.alertify-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2em;
+  opacity: 0.6;
+  margin-left: 10px;
+  transition: opacity 0.3s;
+}
+
+.alertify-close:hover {
+  opacity: 1;
+}
+
+/* Positioning */
+.alertify-right {
+  right: 15px;
+}
+
+.alertify-left {
+  left: 15px;
+}
+
+.alertify-top {
+  top: 15px;
+}
+
+.alertify-bottom {
+  bottom: 15px;
+}
+
+.alertify-center {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+}
+
+/* Rounded Toast */
+.alertify-rounded {
+  border-radius: 25px;
+}
+
+/* Avatar Image */
+.alertify-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Notification Types */
+.alertify-default {
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+}
+
+.alertify-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.alertify-error {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.alertify-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+.alertify-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+/* Responsive Design for Small Screens */
+@media only screen and (max-width: 360px) {
+  .alertify-left,
+  .alertify-right {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: fit-content;
+  }
+}
